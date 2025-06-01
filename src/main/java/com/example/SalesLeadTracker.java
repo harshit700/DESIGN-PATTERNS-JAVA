@@ -1,17 +1,24 @@
 package com.example;
 
+import java.time.LocalDate;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class SalesLeadTracker {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        var person1 = new Person("Hrithik", null, "Roshan"
+                , LocalDate.of(1994, 3, 4), "hrithik@example.com", null);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        addPersonToLeadTracker(person1);
+
+        var person2 = new Person("ShahRukh", null, "Khan"
+                , LocalDate.of(1965, 11, 2), "sh@example.com", null);
+
+        addPersonToLeadTracker(person2);
     }
+
+    private static void addPersonToLeadTracker(Person person) {
+        System.out.println("A new lead was added to the lead tracker: \n" + person);
+    }
+
 }

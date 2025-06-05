@@ -6,13 +6,13 @@ import java.time.LocalDate;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class SalesLeadTracker {
     public static void main(String[] args) {
-        var person1 = new Person("Hrithik", null, "Roshan"
-                , LocalDate.of(1994, 3, 4), "hrithik@example.com", null);
+        var person1 = new Person.PersonBuilder("Hrithik", "Roshan").dateOfBirth(LocalDate.of(1970,4,7))
+                .emailAddress("hrithik@gmail.com").build();
 
         addPersonToLeadTracker(person1);
 
-        var person2 = new Person("ShahRukh", null, "Khan"
-                , LocalDate.of(1965, 11, 2), "sh@example.com", null);
+        var person2 = new Person.PersonBuilder("ShahRukh", "Khan").dateOfBirth(LocalDate.of(1965,11,2))
+                .emailAddress("Shah@gmail.com").build();
 
         addPersonToLeadTracker(person2);
     }

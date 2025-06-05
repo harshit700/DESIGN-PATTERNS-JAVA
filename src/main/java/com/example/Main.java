@@ -4,7 +4,7 @@ package com.example;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class SalesLeadTracker {
+public class Main {
     public static void main(String[] args) {
 //        var person1 = new Person("Hrithik", null, "Roshan"
 //                , LocalDate.of(1994, 3, 4), "hrithik@example.com", null);

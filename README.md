@@ -18,3 +18,9 @@ that will be created.
 that parameter.
 3. This pattern helps in making the code more flexible and extensible, as new types can be added with minimal
 changes to the existing code.
+
+# Improve the factory method pattern with functional programming
+1. Simplify the HashMap: code demonstrates how to use HashMap to store ticket
+types and their corresponding creation logic, replacing the lengthy if-else statements.
+2. Use of Supplier Interface
+3. method Reference

@@ -14,11 +14,19 @@ public class BikeManufacturer {
 
     private static Bike buildBike(String bikeType) {
         if (bikeType.equalsIgnoreCase("ROAD")) {
-            return new Bike(new RoadBikeHandlebars(), new RoadBikePedals(), new RoadBikeTire()
-            , new RoadBikeTire());
+            var roadBikeFactory = new RoadBikeFactory();
+            var handlebars = roadBikeFactory.createHandlebars();
+            var pedals = roadBikeFactory.createPedals();
+            var frontTire = roadBikeFactory.createTire();
+            var backTire = roadBikeFactory.createTire();
+            return new Bike(handlebars,pedals,frontTire,backTire);
         } else if (bikeType.equalsIgnoreCase("MOUNTAIN")) {
-            return new Bike(new MountainBikeHandlebars(), new MountainBikePedals(),
-                    new MountainBikeTire(), new MountainBikeTire());
+            var mountainBikeFactory = new MountainBikeFactory();
+            var handlebars = mountainBikeFactory.createHandlebars();
+            var pedals = mountainBikeFactory.createPedals();
+            var frontTire = mountainBikeFactory.createTire();
+            var backTire = mountainBikeFactory.createTire();
+            return new Bike(handlebars,pedals,frontTire,backTire);
         } else {
             throw new IllegalArgumentException("Bike Type Not Supported");
         }

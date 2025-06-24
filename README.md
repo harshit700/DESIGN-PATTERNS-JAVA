@@ -30,3 +30,15 @@ related objects.
 MountainBike classes for each part. Creating bike from these classes will include if else
 blocks and passing arguments which can be problematic if we pass wrong argument.
 So let's see in next commit how we shall implement abstract factories design pattern.
+
+# Create factories for families of objects
+1. Abstract Factory Pattern: The code demonstrates how to use the abstract factory pattern
+to create families of related objects, such as different types of bike parts (handlebars,
+pedals, tires).
+2. Implementation: It shows how to define an interface for creating bike factories and 
+implement this interface for different types of bikes (road bikes and mountain bikes).
+3. Code Simplification: By using the abstract factory pattern, the code illustrates how
+to encapsulate the knowledge of creating different bike parts, simplifying the main code
+and reducing the need for boilerplate code.
+4. This approach helps in managing object creation more efficiently and keeps the codebase
+clean and maintainable.

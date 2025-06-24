@@ -42,3 +42,16 @@ to encapsulate the knowledge of creating different bike parts, simplifying the m
 and reducing the need for boilerplate code.
 4. This approach helps in managing object creation more efficiently and keeps the codebase
 clean and maintainable.
+
+# Implementing the complete Abstract Factory Pattern
+1. FactoryMaker class: The code introduces the FactoryMaker class, which uses a Map to store
+different bike types and their corresponding factories. This helps in creating the right type
+of bike factory based on the bike type.
+2. Simplified Code: By using the FactoryMaker, the BikeManufacturer class is simplified, making
+the code more readable and flexible. This decouple the logic of creating different bike parts
+from the BikeManufacturer class.
+3. Flexibility and Decoupling: The approach allows adding new bike types without changing the 
+BikeManufacturer class. New factories can be added to the Map in the FactoryMaker class, 
+enhancing flexibility and decoupling.
+4. This method ensures that the client (BikeManufacturer) doesn't need to know the specifics of
+how different types of bikes are created.

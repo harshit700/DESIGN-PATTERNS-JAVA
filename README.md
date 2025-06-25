@@ -30,3 +30,15 @@ c.) Implement the target interface methods in the adapter class, delegating
 calls to the adaptee class methods.
 3. The code demonstrates how to adapt a WordDocumentUploader to work with an
 OnlineApplication class that expects a DocumentUploader.
+
+# Implement the class Adapter pattern
+1. Class Adapter Pattern: This pattern allows you to extend the functionality
+of existing class by creating a new adapter class that inherits from it.
+2. Implementation Steps:
+a.) Extend the existing class (e.g, WordDocumentUploader) in the adapter
+class (e.g, WordDocumentAdapter).
+b.) Override methods in the adapter class to modify or enhance their 
+behaviour.
+3. Comparison with Object Adapter Pattern: The class adapter pattern can
+be simpler and involve less code, but it is less flexible as it can only
+work with one specific class.

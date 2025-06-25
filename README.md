@@ -17,3 +17,16 @@ functionality or when dealing with third-party libraries.
 3. There are two types of Adapter Patterns: Class Version(Uses Inheritance)
 and object version(Uses composition). The object version is more common in
 java due to its support for single inheritance.
+
+# Implement Adapter Design Pattern using Object Adapter Pattern
+1. Purpose of the Adapter Pattern: It allows classes with incompatible
+interfaces to work together by using an adapter.
+2. Implementation Steps:
+a.) Create a new class (e.g, WordDocumentAdapter) that implements the target
+interface (DocumentUploader).
+b.) In the adapter class, include a field for the adaptee class
+   (WordDocumentUploader)
+c.) Implement the target interface methods in the adapter class, delegating
+calls to the adaptee class methods.
+3. The code demonstrates how to adapt a WordDocumentUploader to work with an
+OnlineApplication class that expects a DocumentUploader.

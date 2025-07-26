@@ -2,21 +2,22 @@ package com.example;
 
 public class MusicPlayer {
 
+    private static final RecommendationsProxy recommendationsProxy = new RecommendationsProxy();
+
     public static void main(String[] args) {
         var user = new User("Jill");
-        var recommendations = new SongRecommendations(user);
-        loadHomePage(user,recommendations);
-        loadDiscoverPage(user,recommendations);
+        loadHomePage(user);
+        loadDiscoverPage(user);
     }
 
-    private static void loadHomePage(User user, SongRecommendations recommendations) {
+    private static void loadHomePage(User user) {
         System.out.println("Loading Home Page...");
-        recommendations.showRecommendations(user);
+        recommendationsProxy.showRecommendations(user);
     }
 
-    private static void loadDiscoverPage(User user, SongRecommendations recommendations) {
+    private static void loadDiscoverPage(User user) {
         System.out.println("Loading discover page...");
-        recommendations.showRecommendations(user);
+        recommendationsProxy.showRecommendations(user);
     }
 
 }

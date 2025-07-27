@@ -28,3 +28,16 @@ logger type, requiring changes in multiple places when switching logger types.
 3. Using the Pattern: By using the Chain of Responsibility Pattern, you can pass the
 logger request along a chain of potential loggers until one handles it, reducing
 tight coupling and improving maintainability.
+
+# Implement a successor chain
+1. Chain of Responsibility Pattern: This pattern is used to decouple the sender of a 
+request from its receiver by passing the request along a chain of potential handlers.
+2. Logger Class Updates: The logger class is updated to include a reference to the next
+logger in the chain, allowing requests to be passed along if the current logger can't
+handle them.
+3. Concrete Implementations: Both ConsoleLogger and FileLogger classes are updated to
+handle their specific logging types and pass requests along the chain if necessary.
+4. Building the Chain: A new method is introduced to build the chain of loggers, 
+ensuring the correct order of handling requests.
+5. This approach helps in dynamically adapting to the correct type of logger and 
+decoupling the sender and receiver of the request.
